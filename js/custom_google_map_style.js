@@ -17,7 +17,7 @@ function initializeGoogleMap() {
     var mapOptions = {
         zoom: zoom,
         center: loc,
-        mapTypeId: 'suppablog',
+        mapTypeId: 'Marstech Buzz',
         scrollwheel: false
     };
 
@@ -33,6 +33,6 @@ function initializeGoogleMap() {
 
     var testmap = new google.maps.StyledMapType(stylers, styledMapOptions);
 
-    map.mapTypes.set('suppablog', testmap);
-    map.setMapTypeId('suppablog');
+    map.mapTypes.set('Marstech Buzz', testmap);
+    map.setMapTypeId('Marstech Buzz');
 }

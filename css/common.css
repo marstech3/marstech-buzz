@@ -213,7 +213,7 @@ blockquote:before
     content: '\201C';
     font-size: 180px;
     line-height: 0;
-    font-family: 'Montserrat', sans-serif, Arial;
+    font-family: 'Nunito', sans-serif;
     vertical-align: -65px;
     color: #0697ae;
     text-align: center;
@@ -223,7 +223,7 @@ blockquote
 {
     margin-top: 110px;
     margin-bottom: 60px;
-    font-family: 'Montserrat', sans-serif, Arial;
+    font-family: 'Nunito', sans-serif;
     font-size: 22px;
     line-height: 35px;
     color: #b0c2c2;
@@ -482,7 +482,7 @@ a img.aligncenter {
 .wp-caption {
     max-width: 100%;
     text-align: center;
-    font-family: 'Montserrat', sans-serif, Arial;
+    font-family: 'Nunito', sans-serif;
 }
 
 .wp-caption.alignnone {

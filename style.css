@@ -5,30 +5,30 @@ html
 
 body
 {
-    font-family: 'Libre Baskerville',sans-serif, Arial;;
+    font-family: 'Nunito', sans-serif;
     font-size: 18px; 	
     line-height: 35px;
     font-weight: 400;	
     letter-spacing: -1px;
-    color: #404040;
+    color: #000;
     background-color: #fff;
 }
 
 .montserrat
 {
-    font-family: 'Montserrat', sans-serif, Arial;
+    font-family: 'Nunito', sans-serif;
 }
 
 body a
 {
     text-decoration: none;
-    color: #404040;    
+    color: #000;    
     transition: color .2s linear, background-color .2s linear, border-color .2s linear;
 }
 
 body a:hover
 {
-    color: #0697AE;
+    color: #ff4f5b;
 }
 
 input, textarea, select 
@@ -52,12 +52,12 @@ input, textarea, select
 
 .carousel_pagination a:hover
 {
-    background-color: #0697ae;
+    background-color: #ff4f5b;
 }
 
 .carousel_pagination a.selected
 {
-    background-color: #0697ae;
+    background-color: #ff4f5b;
 }
 
 .doc-loader 
@@ -146,18 +146,18 @@ input, textarea, select
 {
     font-size: 36px;
     width: 32px;
-    color: #0697AE;
+    color: #ff4f5b;
 }
 
 .scroll-top .fa:hover
 {
-    color: #47afbf;
+    color: #ff4f5b;
 }
 
 .sidebar
 {
     position: absolute;
-    background-color: #2D2D2D;
+    background-color: #fff;
     height: 100% !important;
     width: 420px;
     left: -320px;
@@ -178,7 +178,7 @@ input, textarea, select
 {
     width: 320px;
     position: absolute;
-    background: #333333;
+    background: #fff;
     height: 100%;
     overflow-y: auto;
     overflow-x: hidden;
@@ -187,37 +187,37 @@ input, textarea, select
 
 .search-field
 {
-    font-family: 'Montserrat', sans-serif, Arial;
+    font-family: 'Nunito', sans-serif;
     width: 100%;
     height: 100px;
     font-size: 18px;
     padding-left: 50px;
-    background-color: #2D2D2D;
-    color: #5B5B5B;
+    background-color: #ff4f5b;
+    color: #fff;
     border: none;
 }
 
 .search-field::-webkit-input-placeholder
 {
-    font-family: 'Montserrat', sans-serif, Arial;
-    color: #5B5B5B;
+    font-family: 'Nunito', sans-serif;
+    color: #fff;
 }
 .search-field::-moz-placeholder
 {
-    font-family: 'Montserrat', sans-serif, Arial;    
-    color: #5B5B5B;
+    font-family: 'Nunito', sans-serif;    
+    color: #fff;
     opacity: 1;
 }
 .search-field:-ms-input-placeholder
 {
-    font-family: 'Montserrat', sans-serif, Arial;
-    color: #5B5B5B;
+    font-family: 'Nunito', sans-serif;
+    color: #fff;
     opacity: 1;
 }
 .search-field:-moz-placeholder
 {
-    font-family: 'Montserrat', sans-serif, Arial;
-    color: #5B5B5B;
+    font-family: 'Nunito', sans-serif;
+    color: #fff;
     opacity: 1;
 }
 
@@ -229,8 +229,8 @@ input, textarea, select
 
 .site-title
 {
-    font-family: 'Montserrat', sans-serif, Arial;
-    color: #fff;
+    font-family: 'Nunito', sans-serif;
+    color: #000;
     font-size: 30px;
     line-height: 38px;
     font-weight: 700;
@@ -239,8 +239,8 @@ input, textarea, select
 
 .site-description
 {
-    font-family: 'Montserrat', sans-serif, Arial;
-    color: #848484;
+    font-family: 'Nunito', sans-serif;
+    color: #000;
     font-size: 14px;
     line-height: 23px;
     max-width: 200px;
@@ -248,7 +248,7 @@ input, textarea, select
 
 #header-main-menu
 {
-    font-family: 'Montserrat', sans-serif, Arial;
+    font-family: 'Nunito', sans-serif;
     padding-left: 50px;
     padding-top: 80px;    
 }
@@ -261,24 +261,24 @@ input, textarea, select
 
 .sm-clean a
 {
-    color: #ffffff;
+    color: #000;
 }
 
 .sm-clean a.current, .sm-clean a:hover, .sm-clean a:focus, .sm-clean a:active, 
 .sm-clean a.highlighted, .sm-clean ul a:hover, .sm-clean ul a:focus, 
 .sm-clean ul a:active, .sm-clean ul a.highlighted
 {
-    color: #C0D3D3;
+    color: #ff4f5b;
 }
 
 .sm-clean a span.sub-arrow
 {
-    color: #0697AE;
+    color: #ff4f5b;
 }
 
 .main-menu.sm-clean .sub-menu li a
 {
-    color: #848484;
+    color: #ff4f5b;
     text-transform: uppercase;
     font-size: 14px;
 }
@@ -288,7 +288,7 @@ input, textarea, select
     float: right;
     width: 100px; 
     min-height: 100%;
-    background-color: #242424;
+    background-color: #fff;
 }
 
 .logo-holder
@@ -310,7 +310,7 @@ input, textarea, select
     height: 60px;
     padding: 20px 0;
     position: relative;
-    background-color: #333333;
+    background-color: #fff;
 }
 
 #toggle:hover
@@ -323,7 +323,7 @@ input, textarea, select
     content: '';
     height: 4px;
     width: 26px;    
-    background: #5B5B5B;
+    background: #ff4f5b;
     left: 36px;
     position: absolute;
     -webkit-transform-origin: 50% 50%;
@@ -361,7 +361,7 @@ input, textarea, select
 {
     width: 26px;
     height: 4px;
-    background: #5B5B5B;
+    background: #ff4f5b;
     left: 36px;
     position: absolute;
     -webkit-transition: opacity 0.25s;
@@ -380,7 +380,7 @@ input, textarea, select
 .social-list
 {
     text-align: center;
-    color: #5B5B5B;
+    color: #000;
     font-size: 30px;
 }
 
@@ -388,12 +388,12 @@ input, textarea, select
 {
     padding-top: 80px;
     display: block;
-    color: #5b5b5b;
+    color: #000;
 }
 
 .social-list a:hover
 {
-    color: #797979;
+    color: #ff4f5b;
 }
 
 .site-content
@@ -456,17 +456,17 @@ body.open .site-content
 
 .blog-item-holder .entry-content .entry-title a
 {
-    color: #242424;
+    color: #000;
 }
 
 .blog-item-holder .entry-content .entry-title a:hover
 {
-    color: #0697ae;
+    color: #ff4f5b;
 }
 
 .blog-item-holder .entry-content .entry-title
 {
-    font-family: 'Montserrat', sans-serif, Arial;
+    font-family: 'Nunito', sans-serif;
     font-size: 30px;
     line-height: 30px;
     padding-top: 35px;
@@ -494,7 +494,7 @@ body.open .site-content
 
 .load-more-holder
 {
-    font-family: 'Montserrat', sans-serif, Arial;
+    font-family: 'Nunito', sans-serif;
     font-size: 18px;    
     font-weight: 700;
     color: #c0d3d3;
@@ -538,7 +538,7 @@ body.open .site-content
 
 .cat-links
 {
-    font-family: 'Montserrat', sans-serif, Arial;
+    font-family: 'Nunito', sans-serif;
     display: inline-block;    
     font-size: 16px;
     text-transform: uppercase;
@@ -553,7 +553,7 @@ body.open .site-content
 
 .cat-links ul li a
 {
-    color: #D8588C;
+    color: #ff4f5b;
     font-size: 14px;    
 }
 
@@ -569,7 +569,7 @@ body.open .site-content
 
 .published
 {
-    font-family: 'Montserrat', sans-serif, Arial;
+    font-family: 'Nunito', sans-serif;
     display: inline-block;
     font-size: 14px;
     text-transform: uppercase;
@@ -698,7 +698,7 @@ body.open .site-content
 
 .full-screen-scroll h2.entry-title 
 {
-    font-family: 'Montserrat', sans-serif, Arial;
+    font-family: 'Nunito', sans-serif;
     font-size: 50px;
     line-height: 54px;
     margin-top: 150px;    
@@ -724,7 +724,7 @@ body.open .site-content
 
 .single-post h1.entry-title
 {
-    font-family: 'Montserrat', sans-serif, Arial;
+    font-family: 'Nunito', sans-serif;
     margin-bottom: 30px;
     -ms-word-wrap: break-word;
     word-wrap: break-word;
@@ -740,7 +740,7 @@ body.open .site-content
 
 .post-info
 {
-    font-family: 'Montserrat', sans-serif, Arial;
+    font-family: 'Nunito', sans-serif;
     padding-bottom: 70px;    
 }
 /* END SINGLE POST */
@@ -768,7 +768,7 @@ body.open .site-content
 
 .page h1.entry-title
 {    
-    font-family: 'Montserrat', sans-serif, Arial;    
+    font-family: 'Nunito', sans-serif;    
     font-size: 22px;
     line-height: 35px;
 }
@@ -798,7 +798,7 @@ body.open .site-content
 
 .team-holder .member-name
 {
-    font-family: 'Montserrat', sans-serif, Arial;
+    font-family: 'Nunito', sans-serif;
     font-size: 20px;
     line-height: 28px;
     padding: 40px 60px 0px 60px;    
@@ -806,7 +806,7 @@ body.open .site-content
 
 .team-holder .member-position
 {
-    font-family: 'Montserrat', sans-serif, Arial;
+    font-family: 'Nunito', sans-serif;
     font-size: 14px;
     line-height: 22px;
     padding: 10px 60px 0px 60px;
@@ -860,7 +860,7 @@ body.open .site-content
     margin: 30px 0;
     height: 28px;
     font-size: 16px;
-    font-family: 'Montserrat', sans-serif, Arial;
+    font-family: 'Nunito', sans-serif;
     width: 100%;
     line-height: 25px;
 }
@@ -887,7 +887,7 @@ body.open .site-content
     vertical-align: middle;
     text-decoration: none;
     background: transparent;
-    font-family: 'Montserrat', sans-serif, Arial;
+    font-family: 'Nunito', sans-serif;
     font-weight: 700;
     width: 100%;
     font-size: 20px;
@@ -900,7 +900,7 @@ body.open .site-content
 
 .contact-form input[type=text]::-webkit-input-placeholder, .contact-form input[type=email]::-webkit-input-placeholder, .contact-form textarea::-webkit-input-placeholder
 {
-    font-family: 'Montserrat', sans-serif, Arial;
+    font-family: 'Nunito', sans-serif;
     color: #404040;
     font-weight: 700;
     font-size: 20px;
@@ -909,7 +909,7 @@ body.open .site-content
 }
 .contact-form input[type=text]::-moz-placeholder, .contact-form input[type=email]::-moz-placeholder, .contact-form textarea::-moz-placeholder
 {
-    font-family: 'Montserrat', sans-serif, Arial;
+    font-family: 'Nunito', sans-serif;
     color: #404040;
     font-weight: 700;
     font-size: 20px;
@@ -919,7 +919,7 @@ body.open .site-content
 }
 .contact-form input[type=text]:-ms-input-placeholder, .contact-form input[type=email]:-ms-input-placeholder, .contact-form textarea:-ms-input-placeholder
 {
-    font-family: 'Montserrat', sans-serif, Arial;
+    font-family: 'Nunito', sans-serif;
     color: #404040;
     font-weight: 700;
     font-size: 20px;
@@ -928,7 +928,7 @@ body.open .site-content
 }
 .contact-form input[type=text]:-moz-placeholder, .contact-form input[type=email]:-moz-placeholder, .contact-form textarea:-moz-placeholder
 {
-    font-family: 'Montserrat', sans-serif, Arial;
+    font-family: 'Nunito', sans-serif;
     color: #404040;
     font-weight: 700;
     font-size: 20px;
@@ -944,7 +944,7 @@ body.open .site-content
 
 .footer-info
 {
-    font-family: 'Montserrat', sans-serif, Arial;
+    font-family: 'Nunito', sans-serif;
     padding-top: 150px;    
     padding-left: 50px;
     padding-right: 30px;
@@ -962,7 +962,7 @@ body.open .site-content
 
 .footer-info .fa-heart
 {
-    color: #d8588c;
+    color: #ff4f5b;
     padding-left: 3px;
     padding-right: 2px;   
     -webkit-animation: pulse 1s linear infinite;
@@ -971,7 +971,7 @@ body.open .site-content
     animation: pulse 1s infinite;
 }
 
-@keyframes "pulse" {
+@keyframes pulse {
     0% { transform: scale(1.1); }
 70% { transform: scale(0.8,0.8); }
 80% { transform: scale(0.9,0.9); }
@@ -985,14 +985,14 @@ body.open .site-content
 100% { transform: scale(1.1);  }
 }
 
-@-webkit-keyframes "pulse" {
+@-webkit-keyframes pulse {
     0% { transform: scale(1.1); }
 70% { transform: scale(0.8,0.8); }
 80% { transform: scale(0.9,0.9); }
 100% { transform: scale(1.1);  }
 }
 
-@-ms-keyframes "pulse" {
+@-ms-keyframes pulse {
     0% { transform: scale(1.1); }
 70% { transform: scale(0.8,0.8); }
 80% { transform: scale(0.9,0.9); }
