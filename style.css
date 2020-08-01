@@ -301,8 +301,11 @@ input, textarea, select
 {
     max-width: 100%;
     max-height: 100%;
-    width: 100%;
+    width: 50%;
     height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 #toggle
@@ -793,7 +796,7 @@ body.open .site-content
 {
     text-align: center;
     background-color: #F1F1F1;
-    color: #0697AE;
+    color: #ff4f5b;
 }
 
 .team-holder .member-name
@@ -895,7 +898,7 @@ body.open .site-content
 }
 .contact-form input[type=submit]:hover
 {
-    color: #0697ae;
+    color: #ff4f5b;
 }
 
 .contact-form input[type=text]::-webkit-input-placeholder, .contact-form input[type=email]::-webkit-input-placeholder, .contact-form textarea::-webkit-input-placeholder
