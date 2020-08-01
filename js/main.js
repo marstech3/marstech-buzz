@@ -260,3 +260,27 @@ var SendMail = function () {
         alert('Your email is not in valid format');
     }
 };
+
+
+// function searchFunction() {
+//     var input, filter, ul, li, a, i, txtValue, txtValueb, txtValuec, txtValued, b, c, d;
+//     input = document.getElementById("myInput");
+//     filter = input.value.toUpperCase();
+//     ul = document.getElementById("content");
+//     li = ul.getElementsByTagName("div");
+//     for (i = 0; i < li.length; i++) {
+//         a = li[i].getElementsByTagName("a")[0];
+//         b = li[i].getElementsByTagName("a")[1];
+//         c = li[i].getElementsByTagName("a")[2];
+//         d = li[i].getElementsByTagName("a")[3];
+//         txtValue = a.textContent || a.innerText;
+//         txtValueb =  b.textContent || b.innerText;
+//         //txtValuec = c.textContent || c.innerText;
+//         //txtValued = d.textContent || d.innerText;
+//         if (txtValue.toUpperCase().indexOf(filter) > -1) {
+//             li[i].style.display = "";
+//         } else {
+//             li[i].style.display = "none";
+//         }
+//     }
+// }
