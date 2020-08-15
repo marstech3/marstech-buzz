@@ -106,104 +106,469 @@
                 <div class="post-info content-660 center-relative">
                     <div class="cat-links">
                         <ul>
-                            <li><a href="sharedvision.html">Shared Vision</a></li>
+                            <li><a href="techblog.html">Technology</a></li>
                         </ul>
                     </div>
-                    <div class="entry-date published">July 31, 2020</div>
+                    <div class="entry-date published">August 14, 2020</div>
                     <div class="clear"></div>
+                    <div>
+                        <br>
+                        <br>
+                        <img src="images/gqlmeme.jpeg" alt="">
+                    </div>
                 </div>
-
                 <div class="entry-content">
                     <div class="content-wrap content-660 center-relative">
-                        <p>Amidst this pandemic, we all have read many articles stating the carbon emission has lowered
-                            by 17 percent, seen photos of clear waters in Venice canal, clear Delhi skies. Many animals
-                            returned to their indigenous habitats where humans took over. But recently National
-                            Geographic has published an article where it has stated that these changes will be temporary
-                            but rather after this pandemic is over we will see an increased amount of pollution levels.
-                            And this might be true, as a recent study shows that the carbon emissions are only 5 percent
-                            lower than at the same point in 2019, even though normal activity has not yet fully
-                            restarted. Why is this so? “We still have the same cars, the same roads, the same
-                            industries, same houses,” says Corinne Le Quéré, professor of climate change at the
-                            University of East Anglia in Britain and lead author of the original study and subsequent
-                            update. “So as soon as the restrictions are released, we go right back to where we were.”
-                            All the healing done by the environment during this pandemic is temporary, and if we have to
-                            make it permanent we will have to make changes in our lives because change starts from us.
+                        <p>This article focuses on how to set up a GraphQL server from scratch, utilizing Spring Boot.
+                        </p>
+                        <br>
+                        <p>There are many different libraries with different approaches for the same. However, the
+                            library I used here has a mature Spring Boot support and is very easy to use. So this may be
+                            one of your fastest options.
+                        </p>
+                        <br>
+                        <p>Also, This article focuses only on the setup and configuration part and does not cover up
+                            basics about GraphQL. I suggest you should read <a style="text-decoration:underline;"
+                                href="https://www.graphql-java.com/tutorials/getting-started-with-spring-boot/">official
+                                documentation</a> to read basics and
+                            divulge more into GraphQL.
+                        </p>
+                        <br>
+                        <p>In this tutorial, we are going to use a project called <code
+                                class="code_highlight">graphql-tools</code> to integrate GraphQL
+                            with Spring Boot. According to the <a style="text-decoration:underline;"
+                                href="https://github.com/graphql-java-kickstart/graphql-java-tools">project GitHub page
+                                readme</a> , <code class="code_highlight">graphql-tools</code> “allows you to
+                            use the GraphQL schema language to build your <a style="text-decoration:underline;"
+                                href="https://github.com/graphql-java/graphql-java">graphql-java</a> schema and allows
+                            you to BYOO
+                            (bring your own object) to fill in the implementations.”
+                        </p>
+                        <br>
+                        <p>It works great if you have, or want to have, plain old java objects (POJO) that define your
+                            data model. Which I do.
+                        </p>
+                        <br>
+                        <p> <a style="font-weight: 600;">Note:</a> <i>This tutorial assumes that you are familiar with
+                                the Java programming language, the
+                                Spring Boot framework. No prior GraphQL experience is required.</i>
                         </p>
                         <br>
                         <div class="clear"></div>
                     </div>
-                    <div class="post-full-width">
-                        <script>
-                            var slider1_speed = "500";
-                            var slider1_auto = "true";
-                            var slider1_pagination = "true";
-                            var slider1_hover = "true";
-                        </script>
-                        <div class="image-slider-wrapper">
-                            <div class="caroufredsel_wrapper">
-                                <ul id="slider1" class="image-slider slides center-text">
-                                    <li><img src="demo-images/01_blogpost_galery.jpg" alt=""></li>
-                                    <li><img src="demo-images/02_blogpost_galery.jpg" alt=""></li>
-                                    <li><img src="demo-images/03_blogpost_galery.jpg" alt=""></li>
-                                </ul>
-                            </div>
-                            <div class="slider1_pagination carousel_pagination left"></div>
-                            <div class="clear"></div>
-                        </div>
-                        <div class="clear"></div>
-                    </div>
                     <div class="content-wrap content-660 center-relative ">
-                        <p>To make sustainable changes in our lives we will have to think right from the stuff we buy
-                            and use in our daily lives. But how do we know if it is sustainable and made from natural
-                            organic products which will not harm the environment? Sustainida, which is a portmanteau for
-                            Sustain and Nida (Nida is derived from an Arabic word which means ‘To Call’) so Sustainida
-                            means “A call towards sustainability”, is a startup trying to make an impact in the
-                            environment space. They have launched a platform to equip the customers by providing
-                            alternate Eco-friendly choices for commonly used products. What Sustainida does is, it hosts
-                            certified sustainable products from different vendors on its e-commerce platform, it has a
-                            wide range of products from eco-friendly pen to eco-friendly refrigerator, and everything is
-                            biodegradable and made from eco-friendly materials, and by following eco-friendly processes.
-                            Sustainida’s only mission is to bring about a paradigm shift of the society towards a
-                            sustainable way of living, ensuring all three P’s of sustainability, namely, Planet, People,
-                            and Partnerships.</p>
+                        <h3 class="entry-title">
+                            Let’s get to it
+                        </h3>
+                        <p>Assuming you already have a spring boot project setup and ready to use.
+                        <ol style="font-size: 95%; margin-left: 5%;">
+                            <li>Add the dependency in your build.gradle file or pom.xml</li>
+                            <li>Create a GraphQL Schema file</li>
+                            <li>Define Resolver for fields in the schema</li>
+                            <li>Visualize and run through GraphIQL</li>
+                        </ol>
+                        </p>
                         <br>
-                        <p class="wrap-blockquote">Sustainida is all for causing a big change in eco-friendly space, but
-                            not just that Sustainida also galvanizes small scale manufacturers to produce eco-friendly
-                            products and features them in </p>
-                        <blockquote class="inline-blockquote">
-                            <p>Our Mother Earth is healing itself and if we do not stop interfering with its
-                                self-healing process, we might end up making some irreversible effects. Its the best
-                                time shift to more sustainable ways of living.</p>
-                        </blockquote>
-                        <p class="wrap-blockquote">its special section “Shop By Concern" which uplifts
-                            underprivileged, helps village artisans, supports differently-abled and also women
-                            empowerment and some more. Sustainida is not just trying to help us make sustainable choices
-                            but
-                            it is also uplifting small scale manufacturers and helping them grow. It is trying to spread
-                            the wave of sustainability to every nook and corner of India and helping the temporary
-                            benefits from pandemic stay permanent.</p>
+                        <h3 class="entry-title">
+                            1. Add the dependency in your build.gradle file or pom.xml
+                        </h3>
+                        <p>This Example uses Gradle so add the below dependencies to your <code
+                                class="code_highlight">build.gradle</code> file.
+                        </p>
                         <br>
+                        <p>Keep in mind that we are using provider <code
+                                class="code_highlight">com.graphql-java-kickstart</code> instead of <code
+                                class="code_highlight">com.graphql-java</code> since the <a
+                                style="text-decoration:underline;"
+                                href="https://www.graphql-java.com/blog/moving-projects/"> repository is moved </a> to
+                            avoid confusion.
+                        </p>
                         <br>
-                        <img src="demo-images/one_drop_post_image02.jpg" alt="">
+                        <figure>
+
+                            <div class="gist-file" wfd-id="2">
+                                <div class="gist-data" wfd-id="4">
+                                    <div class="js-gist-file-update-container js-task-list-container file-box"
+                                        wfd-id="5">
+                                        <div id="file-build-gradle" class="file " wfd-id="6">
+
+
+                                            <div itemprop="text" class="Box-body p-0 blob-wrapper data type-gradle  "
+                                                wfd-id="7">
+
+                                                <table class="highlight tab-size js-file-line-container"
+                                                    data-tab-size="8" data-paste-markdown-skip="">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td id="file-build-gradle-L1"
+                                                                class="blob-num js-line-number" data-line-number="1">
+                                                            </td>
+                                                            <td id="file-build-gradle-LC1"
+                                                                class="blob-code blob-code-inner js-file-line"><span
+                                                                    class="pl-k" wfd-id="19">..</span>.</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td id="file-build-gradle-L2"
+                                                                class="blob-num js-line-number" data-line-number="2">
+                                                            </td>
+                                                            <td id="file-build-gradle-LC2"
+                                                                class="blob-code blob-code-inner js-file-line"><span
+                                                                    class="pl-en" wfd-id="18">dependencies</span> {</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td id="file-build-gradle-L3"
+                                                                class="blob-num js-line-number" data-line-number="3">
+                                                            </td>
+                                                            <td id="file-build-gradle-LC3"
+                                                                class="blob-code blob-code-inner js-file-line"><span
+                                                                    class="pl-k" wfd-id="17">..</span>.</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td id="file-build-gradle-L4"
+                                                                class="blob-num js-line-number" data-line-number="4">
+                                                            </td>
+                                                            <td id="file-build-gradle-LC4"
+                                                                class="blob-code blob-code-inner js-file-line">compile <span class="pl-s" wfd-id="14"><span class="pl-pds" wfd-id="16">'</span>com.graphql-java-kickstart:graphql-spring-boot-starter:5.0.5<span class="pl-pds" wfd-id="15">'</span></span></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td id="file-build-gradle-L5"
+                                                                class="blob-num js-line-number" data-line-number="5">
+                                                            </td>
+                                                            <td id="file-build-gradle-LC5"
+                                                                class="blob-code blob-code-inner js-file-line">compile <span class="pl-s" wfd-id="11"><span class="pl-pds" wfd-id="13">'</span>com.graphql-java-kickstart:graphiql-spring-boot-starter:5.0.5<span class="pl-pds" wfd-id="12">'</span></span></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td id="file-build-gradle-L6"
+                                                                class="blob-num js-line-number" data-line-number="6">
+                                                            </td>
+                                                            <td id="file-build-gradle-LC6"
+                                                                class="blob-code blob-code-inner js-file-line">compile <span class="pl-s" wfd-id="8"><span class="pl-pds" wfd-id="10">'</span>com.graphql-java-kickstart:graphql-java-tools:5.3.4<span class="pl-pds" wfd-id="9">'</span></span></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td id="file-build-gradle-L7"
+                                                                class="blob-num js-line-number" data-line-number="7">
+                                                            </td>
+                                                            <td id="file-build-gradle-LC7"
+                                                                class="blob-code blob-code-inner js-file-line">}</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+
+
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <figcaption style="color: rgba(117, 117, 117, 1); text-align: center; ">Dependency file
+                            </figcaption>
+                        </figure>
                         <br>
+                        <h3 class="entry-title">
+                            2. Create a Schema file
+                        </h3>
+                        <p>Create a file called <code class="code_highlight">schema.graphqls</code> in the resources
+                            folder, with the following content:
+                        </p>
                         <br>
-                        <p>Sustainida provides its customers with a wide range of products from multiple brands like
-                            Mitticool, Eco-Buddy, Eco-Exist, Lalit Greens, Bhava India, Maru Eco Bags along with the
-                            small manufacturers. These brands are manufacturing the products they are specialized in and
-                            Sustainida is helping them sell these products to the customers and envisions to be the
-                            one-stop solution for sustainable products. These brands are making products that you can
-                            use in the kitchen, or as stationery for your office or even decorate your home with it.</p>
+                        <figure>
+                            <div class="gist-file" wfd-id="4">
+                                <div class="js-gist-file-update-container js-task-list-container file-box" wfd-id="5">
+                                    <div id="file-schema-graphqls" class="file " wfd-id="6">
+
+
+                                        <div itemprop="text" class="Box-body p-0 blob-wrapper data type-graphql  "
+                                            wfd-id="7">
+
+                                            <table class="highlight tab-size js-file-line-container" data-tab-size="8"
+                                                data-paste-markdown-skip="">
+                                                <tbody>
+                                                    <tr>
+                                                        <td id="file-schema-graphqls-L1" class="blob-num js-line-number"
+                                                            data-line-number="1"></td>
+                                                        <td id="file-schema-graphqls-LC1"
+                                                            class="blob-code blob-code-inner js-file-line"><span
+                                                                class="pl-k" wfd-id="16">schema</span> {</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td id="file-schema-graphqls-L2" class="blob-num js-line-number"
+                                                            data-line-number="2"></td>
+                                                        <td id="file-schema-graphqls-LC2"
+                                                            class="blob-code blob-code-inner js-file-line"> <span
+                                                                class="pl-v" wfd-id="15">query</span> : <span
+                                                                class="pl-c1" wfd-id="14">Query</span></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td id="file-schema-graphqls-L3" class="blob-num js-line-number"
+                                                            data-line-number="3"></td>
+                                                        <td id="file-schema-graphqls-LC3"
+                                                            class="blob-code blob-code-inner js-file-line">}</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td id="file-schema-graphqls-L4" class="blob-num js-line-number"
+                                                            data-line-number="4"></td>
+                                                        <td id="file-schema-graphqls-LC4"
+                                                            class="blob-code blob-code-inner js-file-line">
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td id="file-schema-graphqls-L5" class="blob-num js-line-number"
+                                                            data-line-number="5"></td>
+                                                        <td id="file-schema-graphqls-LC5"
+                                                            class="blob-code blob-code-inner js-file-line"><span
+                                                                class="pl-k" wfd-id="13">type</span> <span class="pl-c1"
+                                                                wfd-id="12">Query</span> {</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td id="file-schema-graphqls-L6" class="blob-num js-line-number"
+                                                            data-line-number="6"></td>
+                                                        <td id="file-schema-graphqls-LC6"
+                                                            class="blob-code blob-code-inner js-file-line"> <span
+                                                                class="pl-v" wfd-id="11">user</span>(id : ID) : <span
+                                                                class="pl-c1" wfd-id="10">User</span></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td id="file-schema-graphqls-L7" class="blob-num js-line-number"
+                                                            data-line-number="7"></td>
+                                                        <td id="file-schema-graphqls-LC7"
+                                                            class="blob-code blob-code-inner js-file-line">}</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td id="file-schema-graphqls-L8" class="blob-num js-line-number"
+                                                            data-line-number="8"></td>
+                                                        <td id="file-schema-graphqls-LC8"
+                                                            class="blob-code blob-code-inner js-file-line">
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td id="file-schema-graphqls-L9" class="blob-num js-line-number"
+                                                            data-line-number="9"></td>
+                                                        <td id="file-schema-graphqls-LC9"
+                                                            class="blob-code blob-code-inner js-file-line"><span
+                                                                class="pl-k" wfd-id="9">type</span> <span class="pl-c1"
+                                                                wfd-id="8">User</span> {</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td id="file-schema-graphqls-L10"
+                                                            class="blob-num js-line-number" data-line-number="10"></td>
+                                                        <td id="file-schema-graphqls-LC10"
+                                                            class="blob-code blob-code-inner js-file-line"> id : ID !
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td id="file-schema-graphqls-L11"
+                                                            class="blob-num js-line-number" data-line-number="11"></td>
+                                                        <td id="file-schema-graphqls-LC11"
+                                                            class="blob-code blob-code-inner js-file-line"> firstName : String
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td id="file-schema-graphqls-L12"
+                                                            class="blob-num js-line-number" data-line-number="12"></td>
+                                                        <td id="file-schema-graphqls-LC12"
+                                                            class="blob-code blob-code-inner js-file-line"> email : String
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td id="file-schema-graphqls-L13"
+                                                            class="blob-num js-line-number" data-line-number="13"></td>
+                                                        <td id="file-schema-graphqls-LC13"
+                                                            class="blob-code blob-code-inner js-file-line">}</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+
+
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                            </div>
+                            <figcaption style="color: rgba(117, 117, 117, 1); text-align: center; ">Schema file
+                            </figcaption>
+                        </figure>
+                        <p>
+                            Any files ending with the extension .graphqls within your classpath are automatically
+                            scanned and parsed.
+                        </p>
                         <br>
-                        <p>We from Marstech being Sustainida’s technology partner are helping Sustainida maintain its
-                            online presence and widening its range from Pune city to all over India. We believe in the
-                            vision of Sustainida and we are glad to be a part of this eco-friendly revolution. And if
-                            you also want to be a part of this and have some cool eco-friendly product which you would
-                            like to feature on Sustainida you can partner with them by clicking here (sustainida’s
-                            partner with our link).</p>
+                        <p> <a style="font-weight: 600;">Note:</a> <i>The file name is not important. However, the
+                                extension must be <code class="code_highlight">.graphqls</code>, otherwise, the library
+                                will not find it. The file should
+                                also be present in the classpath of your project to be visible.</i>
+                        </p>
                         <br>
-                        <p>Marstech believes in the vision of its clients and helps them to achieve their missions.
-                            Please do visit Sustainida (provide sustainida’s link via marstech) and leave your feedback
-                            in the comments below. Also, visit marstech.co.in to know who we are and what we do.</p>
+                        <p>
+                            GraphQL Java Tools automatically maps fields in your GraphQL objects to those on your java
+                            objects. For most scalar fields, a POJO with fields and/or getter methods is enough to
+                            describe the data to GraphQL.
+                        </p>
+                        <br>
+                        <h3 class="entry-title">
+                            3. Define your Resolver
+                        </h3>
+                        <p>GraphQL Java Tools lets you register Resolvers for any type. Each field on each type is
+                            backed by the resolver.
+                        </p>
+                        <br>
+                        <p>The library will first attempt to map fields to methods on the resolver before mapping them
+                            to fields or methods on the data class.
+                        </p>
+                        <br>
+                        <p>In our case, we have declared a UserResolver that implements the GraphQLQueryResolver
+                            interface. It should also have @component or @Service Annotation.
+                        </p>
+                        <br>
+                        <p>Create a UserResolver Java class with contents :
+                        </p>
+                        <br>
+                        <figure>
+                            <div class="gist-file" wfd-id="4">
+                                <div class="js-gist-file-update-container js-task-list-container file-box" wfd-id="5">
+                                    <div id="file-userresolver-java" class="file " wfd-id="6">
+
+
+                                        <div itemprop="text" class="Box-body p-0 blob-wrapper data type-java  "
+                                            wfd-id="7">
+
+                                            <table class="highlight tab-size js-file-line-container" data-tab-size="8"
+                                                data-paste-markdown-skip="">
+                                                <tbody>
+                                                    <tr>
+                                                        <td id="file-userresolver-java-L1"
+                                                            class="blob-num js-line-number" data-line-number="1"></td>
+                                                        <td id="file-userresolver-java-LC1"
+                                                            class="blob-code blob-code-inner js-file-line"><span
+                                                                class="pl-k" wfd-id="27">import</span> <span
+                                                                class="pl-smi"
+                                                                wfd-id="26">com.coxautodev.graphql.tools.GraphQLQueryResolver</span>;
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td id="file-userresolver-java-L2"
+                                                            class="blob-num js-line-number" data-line-number="2"></td>
+                                                        <td id="file-userresolver-java-LC2"
+                                                            class="blob-code blob-code-inner js-file-line"><span
+                                                                class="pl-k" wfd-id="25">import</span> <span
+                                                                class="pl-smi"
+                                                                wfd-id="24">org.springframework.stereotype.Component</span>;
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td id="file-userresolver-java-L3"
+                                                            class="blob-num js-line-number" data-line-number="3"></td>
+                                                        <td id="file-userresolver-java-LC3"
+                                                            class="blob-code blob-code-inner js-file-line">
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td id="file-userresolver-java-L4"
+                                                            class="blob-num js-line-number" data-line-number="4"></td>
+                                                        <td id="file-userresolver-java-LC4"
+                                                            class="blob-code blob-code-inner js-file-line"><span
+                                                                class="pl-k" wfd-id="23">@Autowired</span></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td id="file-userresolver-java-L5"
+                                                            class="blob-num js-line-number" data-line-number="5"></td>
+                                                        <td id="file-userresolver-java-LC5"
+                                                            class="blob-code blob-code-inner js-file-line"><span
+                                                                class="pl-k" wfd-id="22">private</span> <span
+                                                                class="pl-smi" wfd-id="21">UserService</span> userService;</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td id="file-userresolver-java-L6"
+                                                            class="blob-num js-line-number" data-line-number="6"></td>
+                                                        <td id="file-userresolver-java-LC6"
+                                                            class="blob-code blob-code-inner js-file-line">
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td id="file-userresolver-java-L7"
+                                                            class="blob-num js-line-number" data-line-number="7"></td>
+                                                        <td id="file-userresolver-java-LC7"
+                                                            class="blob-code blob-code-inner js-file-line"><span
+                                                                class="pl-k" wfd-id="20">@Component</span></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td id="file-userresolver-java-L8"
+                                                            class="blob-num js-line-number" data-line-number="8"></td>
+                                                        <td id="file-userresolver-java-LC8"
+                                                            class="blob-code blob-code-inner js-file-line"><span
+                                                                class="pl-k" wfd-id="19">public</span> <span
+                                                                class="pl-k" wfd-id="18">class</span> <span
+                                                                class="pl-en" wfd-id="17">UserResolver</span> <span
+                                                                class="pl-k" wfd-id="16">implements</span> <span
+                                                                class="pl-e" wfd-id="15">GraphQLQueryResolver</span> {
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td id="file-userresolver-java-L9"
+                                                            class="blob-num js-line-number" data-line-number="9"></td>
+                                                        <td id="file-userresolver-java-LC9"
+                                                            class="blob-code blob-code-inner js-file-line"> <span
+                                                                class="pl-k" wfd-id="14">public</span> <span
+                                                                class="pl-smi" wfd-id="13">User</span> <span
+                                                                class="pl-en" wfd-id="12">user</span>(<span
+                                                                class="pl-smi" wfd-id="11">Long</span> <span
+                                                                class="pl-v" wfd-id="10">id</span>) {</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td id="file-userresolver-java-L10"
+                                                            class="blob-num js-line-number" data-line-number="10"></td>
+                                                        <td id="file-userresolver-java-LC10"
+                                                            class="blob-code blob-code-inner js-file-line"> <span
+                                                                class="pl-k" wfd-id="9">return</span> userService<span
+                                                                class="pl-k" wfd-id="8">.</span>getUserById(id);</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td id="file-userresolver-java-L11"
+                                                            class="blob-num js-line-number" data-line-number="11"></td>
+                                                        <td id="file-userresolver-java-LC11"
+                                                            class="blob-code blob-code-inner js-file-line"> }</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td id="file-userresolver-java-L12"
+                                                            class="blob-num js-line-number" data-line-number="12"></td>
+                                                        <td id="file-userresolver-java-LC12"
+                                                            class="blob-code blob-code-inner js-file-line">}</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+
+
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                            </div>
+                            <figcaption></figcaption>
+                        </figure>
+                        <br>
+                        <p>
+                            Keep in mind that: <i style="font-weight: 600;">a resolver method will only be called if we
+                                actually query that particular field.</i> Otherwise, it will never be called. <i
+                                style="font-weight: 600;">This is one of the main benefits of GraphQL over REST.</i>
+                        </p>
+                        <br>
+                        <h3 class="entry-title">
+                            4. Visualize and run through GraphIql
+                        </h3>
+                        <p style="font-weight: 600;">Run your Spring boot Application! Voila!
+                        </p>
+                        <br>
+                        <p>Access the interactive graphql playground at <br>
+                            <a style="text-decoration:underline;"
+                                href="http://localhost:8080/graphiql">http://localhost:8080/graphiql</a>
+                        </p>
+                        <br>
+                        <img alt="Image for post" class="dr ve s t u dc ai c" width="930" height="269"
+                            src="images/gqlgif.gif">
+                        <br>
                     </div>
                 </div>
                 <div class="clear"></div>

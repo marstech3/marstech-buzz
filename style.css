@@ -309,6 +309,43 @@ input, textarea, select
     padding-top: 20px;
 }
 
+.code_highlight{
+    font-family: Menlo, Monaco, "Courier New", Courier, monospace;
+    font-size: 90%;
+    padding: 2px 4px;
+    background-color: rgba(242, 242, 242, 1);
+    font-weight: 400;
+}
+
+.blob-code {
+    text-align: left;
+    border: 0;
+    position: relative;
+    padding-right: 10px;
+    padding-left: 10px;
+    line-height: 20px;
+    vertical-align: top;
+}
+.blob-code-inner {
+    overflow: visible;
+    word-wrap: normal;
+    white-space: pre;
+}
+
+.gist-file {
+    text-rendering: auto;
+    margin-bottom: 1em;
+    font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
+    border: 1px solid;
+    border-color: #ddd #ddd #ccc;
+    border-radius: 6px;
+    margin-bottom: 0 !important;
+    font-size: 16px;
+    color: #333;
+    text-align: left;
+    direction: ltr;
+}
+
 #toggle
 {
     height: 60px;
