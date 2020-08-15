@@ -2,7 +2,7 @@
 var loc = new google.maps.LatLng(lat, lng);
 var markerPos = new google.maps.LatLng(lat, lng);
 
-function initializeGoogleMap() {
+function initMap() {
     var stylers = [
         {
             "featureType": "all",
